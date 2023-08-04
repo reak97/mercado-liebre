@@ -15,4 +15,16 @@ body{
 }
 .p-16{
     padding: 16px;
+}
+.p-12{
+    padding: 12px;
+}     
+.bold{
+    font-weight: bold;
 } 
+.center{
+    text-align: center;
+}
+ul{
+    text-align: center;
+}
