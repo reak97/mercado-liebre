@@ -216,14 +216,18 @@ body{
 }
 }
 @media (max-width: 760px) {
+    .fs-search{
+        font-size: 14px;
+    }
      .logo{
         width: 40%;
      }
      .search{
-        position: absolute;
-        left: 45%;
-        top: 30px;
-    }
+        position: relative;
+        left: 40%;
+        top: -40px; 
+        }
+
     .buy-header{
         margin: 0;
         max-width: none;
