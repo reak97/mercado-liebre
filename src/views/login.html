@@ -54,58 +54,18 @@
         <li><a href="/login">Ingresá</a><i class="fa-solid fa-arrow-right-to-bracket"></i></li>
         <li><a href="#">Mis compras</a><i class="fa-solid fa-cart-shopping"></i></i></li>
     </ul> 
-       
-
 </nav>
-</header> 
-<form action="/register" method="POST" class="create-form center">
+</header>
+<form action="/login" method="POST" class="create-form center">
     <div class="control-formulario">
-        <label>Nombre y Apellido:</label>
-        <input type="text" name="nombre-apellido" placeholder="Sebastian Montero" required>
-    </div>
-    <div class="control-formulario">
-        <label>Nombre de usuari@:</label>
-        <input type="text" name="usuario" required>
-    </div>
-    <div class="control-formulario">
-        <label>Fecha de nacimiento:</label>
-        <input type="date" name="fecha-nacimiento" value="2023-01-01" required>
-    </div>
-    <div class="control-formulario">
-        <label>Domicilio:</label>
-        <input type="text" name="domicilio" placeholder="Calle falsa 123" required>
-    </div>
-    <div class="control-formulario">
-        <label>Perfil del usuario: </label>
-        <label>Comprador</label>
-        <input type="radio" name="perfil-usuario" value="Comprador" required>
-        <label>Vendedor</label>
-        <input type="radio" name="perfil-usuario" value="Vendedor" checked required>
-    </div>
-    <div class="control-formulario">
-        <label>Categorias de interés</label>
-        <select name="categorias-de-interes" required>
-            <option value="elec">Electro</option>
-            <option value="mo">Moda</option>
-            <option value="ho">Hogar</option>
-            <option value="jug">Jugetería</option>
-            <option value="vid">Vida sana</option>
-        </select>
-    </div>
-    <div class="control-formulario">
-        <label>Foto de usuario</label>
-        <input type="file" name="avatar" accept=".jpg .png" required>
+        <label>Nombre de usuari@</label>
+        <input type="text" name="nombre-usuario" required>
     </div>
     <div class="control-formulario">
         <label>Contraseña</label>
         <input type="password" name="password" required>
     </div>
     <div class="control-formulario">
-        <label>Confirmar contraseña</label>
-        <input type="password" name="confirm-password" required>
-    </div>
-    <div class="control-formulario">
-        <button type="reset" class="boton-formulario">Borrar</button>
         <button type="submit" class="boton-formulario">Enviar</button>
     </div>
 </form>

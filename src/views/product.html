@@ -18,13 +18,22 @@
 </head>
 
 <body class="bg-ligh-grey"> 
-    <header class="bg-yellow">
+    <header class="main-header">
         <div class="main-header-top-bar">
-            <img src="/images/logo-mercado-liebre.svg" class="logo" alt="Logo Mercado Liebre">
-            <h2 class="buy-header bold">
+            <a href="/"><img src="/images/logo-mercado-liebre.svg" class="logo" alt="Logo Mercado Liebre"></a>
+            <div class="p-2 w-50 align-center m-search flex1">
+                <form action="/" class="p-1 flex radius-5 bg-white">
+                    <input class="flex-grow b-none outline-none fs-18" type="text" name="search"
+                        placeholder="Buscá productos por nombre, marcas o palabras clave" />
+                    <button type="submit" class="bg-white b-none">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+            <h2 class="buy-header bold flex2">
                 <i class="fa-solid fa-hand-holding-dollar"></i>
                 Comprá en cuotas y sin tarjeta de crédito
-            </h2>
+        </h2>
         </div>
         <div>
             <a href="#" class="hamburguer-buttom">
@@ -36,20 +45,20 @@
         <ul class="left-navbar">
         <li><a href="#">Ofertas</a></li>
         <li><a href="#">Tiendas oficiales</a></li>
-        <li><a href="#">Vender</a></li>
+        <li><a href="/product">Vender</a></li>
         <li><a href="#">Ayudas</a></li>
 
     </ul>
     <ul class="right-navbar">
-        <li><a href="#">Creá tu cuenta</a><i class="fa-solid fa-id-card"></i></li>
-        <li><a href="#">Ingresá</a><i class="fa-solid fa-arrow-right-to-bracket"></i></li>
+        <li><a href="/register">Creá tu cuenta</a><i class="fa-solid fa-id-card"></i></li>
+        <li><a href="/login">Ingresá</a><i class="fa-solid fa-arrow-right-to-bracket"></i></li>
         <li><a href="#">Mis compras</a><i class="fa-solid fa-cart-shopping"></i></i></li>
     </ul> 
        
 
 </nav>
 </header>
-<form action="/crear-producto" method="POST" class="create-form">
+<form action="/product" method="POST" class="create-form">
     <div class="control-formulario">
         <label>Nombre Del Producto:</label>
         <input type="text" name="nombre" placeholder="Television" class="control">
