@@ -252,6 +252,7 @@ form p{
 @media (max-width: 760px) {
     .fs-search{
         font-size: 14px;
+        width: 100%;
     }
      .logo{
         width: 40%;
