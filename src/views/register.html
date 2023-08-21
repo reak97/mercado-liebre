@@ -22,10 +22,10 @@
         <div class="main-header-top-bar">
             <a href="/"><img src="/images/logo-mercado-liebre.svg" class="logo" alt="Logo Mercado Liebre"></a>
             <div class="p-2 w-50 align-center m-search">
-                <form action="/" class="p-1 flex radius-5 bg-white">
-                    <input class="flex-grow b-none outline-none fs-18" type="text" name="search"
+                <form action="/" class=" flex bg-white border-search">
+                    <input class="flex-grow b-none outline-none fs-18 fs-search border-search" type="text" name="search"
                         placeholder="Buscá productos por nombre, marcas o palabras clave" />
-                    <button type="submit" class="bg-white b-none">
+                    <button type="submit" class="bg-white b-none border-search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
@@ -61,35 +61,63 @@
 <form action="/register" method="POST" class="create-form center">
     <div class="control-formulario">
         <label>Nombre y Apellido:</label>
-        <input type="text" name="nombre-apellido" placeholder="Sebastian Montero" required>
+        <input type="text" name="nombre-apellido" placeholder="Nombre y Apellido" required class="box-formulario">
     </div>
     <div class="control-formulario">
         <label>Nombre de usuari@:</label>
-        <input type="text" name="usuario" required>
+        <input type="text" name="usuario" placeholder="Nombre de usuario" required class="box-formulario">
+    </div>
+    <div class="control-formulario">
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="E-mail" required class="box-formulario">
     </div>
     <div class="control-formulario">
         <label>Fecha de nacimiento:</label>
-        <input type="date" name="fecha-nacimiento" value="2023-01-01" required>
+        <input type="date" name="fecha-nacimiento" value="2023-01-01" required class="box-formulario">
     </div>
     <div class="control-formulario">
         <label>Domicilio:</label>
-        <input type="text" name="domicilio" placeholder="Calle falsa 123" required>
+        <input type="text" name="domicilio" placeholder="Calle falsa 123" required class="box-formulario">
     </div>
     <div class="control-formulario">
         <label>Perfil del usuario: </label>
-        <label>Comprador</label>
+        <div class="flex-register-perfil">
+            <p>Comprador</p>
         <input type="radio" name="perfil-usuario" value="Comprador" required>
-        <label>Vendedor</label>
+        <p>Vendedor</p>
         <input type="radio" name="perfil-usuario" value="Vendedor" checked required>
+    </div>
+        
     </div>
     <div class="control-formulario">
         <label>Categorias de interés</label>
-        <select name="categorias-de-interes" required>
-            <option value="elec">Electro</option>
-            <option value="mo">Moda</option>
-            <option value="ho">Hogar</option>
-            <option value="jug">Jugetería</option>
-            <option value="vid">Vida sana</option>
+        <div class="flex-register">
+            <p>Electro</p>
+            <input type="checkbox" name="categorias-de-interes" value="Electro" required>
+        </div>
+        
+        <div class="flex-register">
+            <p>Moda</p>
+            <input type="checkbox" name="categorias-de-interes" value="Moda" required>
+        </div>
+        
+        <div class="flex-register">
+            <p>Hogar</p>
+            <input type="checkbox" name="categorias-de-interes" value="Hogar" required>
+        </div>
+        
+        <div class="flex-register">
+            <p>Jugetería</p>
+            <input type="checkbox" name="categorias-de-interes" value="Jugetería" required>
+        </div>
+        
+        <div class="flex-register">
+            <p>Vida sana</p>
+            <input type="checkbox" name="categorias-de-interes" value="Vida sana" required>
+        </div>
+        
+        
+            
         </select>
     </div>
     <div class="control-formulario">
@@ -98,11 +126,11 @@
     </div>
     <div class="control-formulario">
         <label>Contraseña</label>
-        <input type="password" name="password" required>
+        <input type="password" name="password" required class="box-formulario">
     </div>
     <div class="control-formulario">
         <label>Confirmar contraseña</label>
-        <input type="password" name="confirm-password" required>
+        <input type="password" name="confirm-password" required class="box-formulario">
     </div>
     <div class="control-formulario">
         <button type="reset" class="boton-formulario">Borrar</button>
@@ -110,18 +138,24 @@
     </div>
 </form>
 </body>
-<footer class="bg-yellow">
-    <ul><i class="fa-solid fa-credit-card"></i>
-        <li><p class = "bold">Pagá con tarjeta o en efectivo<p class="p-12"> Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+<footer class="bg-ligh-grey m-footer flex-row">
+    <ul class="center m-b-footer">
+        <li class="margin-footer">
+            <i class="fa-solid fa-credit-card fa-xl m-b-footer" style="color: #03264c;"></i>
+            <p class = "bold">Pagá con tarjeta o en efectivo<p> Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
             puntos de pago. ¡Y siempre es seguro!</p></p></li>
-            <i class="fa-solid fa-gift"></i>    
-        <li><p class="bold">Envío gratis desde $ 2.500<p class="p-12">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+               
+        <li class="margin-footer">
+            <i class="fa-solid fa-gift fa-xl m-b-footer" style="color: #03264c;"></i>
+            <p class="bold">Envío gratis desde $ 2.500<p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
             productos. Es un beneficio de Mercado Puntos.</p></p></li>  
-            <i class="fa-solid fa-user-shield"></i> 
-        <li><p class="bold">Seguridad, de principio a fin <p class="p-12">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
-            porque estás siempre protegid@.</p></p></li>  
-        <p| class="p-12">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>      
+             
+        <li class="margin-footer">
+            <i class="fa-solid fa-user-shield fa-xl m-b-footer" style="color: #03264c;"></i>
+            <p class="bold">Seguridad, de principio a fin <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+            porque estás siempre protegid@.</p></p></li>       
     </ul>
+    <p class="ta-cr">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>  
 </footer>    
 
 </html>

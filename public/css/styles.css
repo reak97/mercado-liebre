@@ -11,8 +11,7 @@ body{
 }
 .bg-yellow{
     background-color: #eac926;
-    padding: 20px; 
-    margin-top: 25px;
+    
 }
 .main-header{
     width: 100%;
@@ -21,6 +20,9 @@ body{
 }
 .bg-ligh-grey{
     background-color: #ebebeb;
+}
+.m-footer{
+    padding: 20px;
 } 
 .logo{
     width: 100%;
@@ -28,15 +30,17 @@ body{
 .align-center {
     align-self: center;
   }
-.radius-5{
-    border-radius: 5px;
-}
-.b-none {
-    border: none;
-  }
+
 .m-search{
     margin-left: 20px;
-}  
+}
+.border-search{
+    border-radius: 30px 30px 30px 30px;
+    -moz-border-radius: 30px 30px 30px 30px;
+    -webkit-border-radius: 30px 30px 30px 30px;
+    border: 0px #000000;
+    padding: 5px;
+} 
 .buy-header{
     font-weight: 400;
     text-align: center;
@@ -146,10 +150,37 @@ body{
 .control-formulario{
     margin-bottom: 15px;
 }
+.box-formulario{
+    border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    border: 0px solid #000000;
+    padding: 10px; 
+    width: 300px;
+}
 .control-formulario label{
     margin-bottom: 5px;
-    font-style: italic;
-    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    display: block; 
+    padding: 10px;
+} 
+.flex-register-perfil{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 50%;
+    margin-left: 120px;
+}
+.flex-register{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    margin-left: 40px;
+}
+form p{
+    font-size: 16px;
+    padding: 10px;
+    font-style: normal;
 }
 .control{
     width: 100%;
@@ -211,10 +242,13 @@ body{
     .md-w-50 {
         width: 48%;
       }
-     .md-product-shadow {
+    .md-product-shadow {
         box-shadow: 0px 0px 10px rgb(100,100,100);
-}
-}
+      }
+      
+
+    }
+    
 @media (max-width: 760px) {
     .fs-search{
         font-size: 14px;
@@ -264,7 +298,23 @@ body{
     .main-navbar li {
         margin: 0 5px;
     }
+    .description {
+        display: none;
+        transition: opacity 1s;
+        transition: transform 1s;
+      }
+
+      .product:hover .description {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .product:hover .product-shadow {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+      }
     }
+    
 
 @media (min-width: 1200px){
     .logo{
@@ -293,5 +343,16 @@ body{
     .main-navbar a{
         font-size: 19px;
     }
+    .flex-row ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .m-b-footer{
+        margin-bottom: 20px;
+
+    }
+    
+    
 } 
 
